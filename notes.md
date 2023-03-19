@@ -20,7 +20,14 @@
     - desc users
 11. npx sequelize db:migrate:undo => undo changes in db
 
-   
+
+### SETUP
+1. create user-repositoy => check repo method in index.js
+2. 
+
+
+
+
 3. create migrations and seeder npx sequelize init
 4. Model & Migration creation* >npx sequelize model:generate --name Booking --attributes flightId:integer,userId:integer,status:enum
 5. Do Changes in Model & Migration npx sequelize db:migrate

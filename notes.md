@@ -9,6 +9,18 @@
 5. npx sequelize init ->config,models,migration,seeder auto created
 6. setup a config/config.json file => enter password,port and database
 7. Go to => cd src => npx sequelize db:create => check show databases
+8. model name should be sigular => create model
+   javascript `npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string,password:string
+   `
+9. model and migrations will create we can add constraint like allownull false 
+     9. 1. migration => make changes in db level
+        2. model => make changes in js level
+10. npx sequelize db:migrate => apply changes in db 
+    - show tables;
+    - desc users
+11. npx sequelize db:migrate:undo => undo changes in db
+
+   
 3. create migrations and seeder npx sequelize init
 4. Model & Migration creation* >npx sequelize model:generate --name Booking --attributes flightId:integer,userId:integer,status:enum
 5. Do Changes in Model & Migration npx sequelize db:migrate

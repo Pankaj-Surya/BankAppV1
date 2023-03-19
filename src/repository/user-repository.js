@@ -12,7 +12,7 @@ class UserRepository {
     }
   }
 
-  async deleteUser({ userId }) {
+  async deleteUser(userId ) {
     try {
       await User.destroy({
         where: {
@@ -26,7 +26,7 @@ class UserRepository {
   }
 
 
-  async updateUser({ userId, data }) {
+  async updateUser(userId, data ) {
     try {
       const user = await User.update(data, {
         where: {

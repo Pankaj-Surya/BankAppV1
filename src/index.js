@@ -1,16 +1,15 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const {PORT}  = require('./config/serverConfig')
-
-const {User} =  require('./models/index')
 const UserRepository =  require('./repository/user-repository')
+const ApiRoutes = require('./routes/index') 
 
 const setupAndStartServer = async ()=>{
     const app = express()
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }))
      
-    //app.use('/api', apiRoutes)
+    app.use('/api', ApiRoutes)
 
     // app.get('/test',async (req,res)=>{
     //     res.send("Hi Test")

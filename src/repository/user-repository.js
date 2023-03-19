@@ -26,7 +26,7 @@ class UserRepository {
   }
 
 
-  async updateCity({ userId, data }) {
+  async updateUser({ userId, data }) {
     try {
       const user = await User.update(data, {
         where: {
@@ -39,6 +39,7 @@ class UserRepository {
       throw { error }
     }
   }
+
 
   async getUser(userId) {
     try {
